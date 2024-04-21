@@ -166,6 +166,8 @@ public class MyLinkedList<T> implements MyList<T> {
         }
     }
 
+
+    //Adds new element at the start of linked list
     @Override
     public void addFirst(T item){
         Node<T> newNode = new Node<>(item, null);
@@ -177,7 +179,7 @@ public class MyLinkedList<T> implements MyList<T> {
         head = newNode;
     }
 
-
+    //Adds new element at the end of linked list
     @Override
     public void addLast(T item){
         Node<T> newNode = new Node<>(item, null);
@@ -193,6 +195,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
 
+    //Gets element from linked list from a specified index 
     @Override
     public T get(int index){
         checkElementIndex(index);
@@ -204,12 +207,14 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
 
+     //Gets the first element of a linked list 
     @Override
     public T getFirst(){
         isEmpty();
         return head.item;
     }
 
+     //Gets the last elemennt of a linked list 
     @Override
     public T getLast(){
         isEmpty();
@@ -218,7 +223,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
 
-
+ //Removes element from linked list from a specified index 
     @Override
     public void remove(int index){
         checkElementIndex(index);
@@ -238,12 +243,15 @@ public class MyLinkedList<T> implements MyList<T> {
         size--;
     }
 
+     //Removes the first element from a linked list
     @Override
     public void removeFirst(){
         isEmpty();
         head=head.next;
     }
 
+    
+//Removes the last element from a linked list
     @Override
     public void removeLast(){
         isEmpty();
