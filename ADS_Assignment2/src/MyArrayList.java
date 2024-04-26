@@ -38,7 +38,7 @@ public class MyArrayList<T> implements MyList<T> {
     public void checkForCapacity(){
         if(size == array.length){
 
-            T[] newArray = (T[]) new Object[size * 2 + 1];
+            T[] newArray = (T[]) new Object[size + 3];
             for(int i = 0; i<size; i++){
 
                 newArray[i] = (T) array[i];
